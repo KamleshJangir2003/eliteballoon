@@ -167,13 +167,49 @@ const areaPages=Object.entries(cityAreaSEO).flatMap(([city,areas])=>areas.map(([
   primary:`Decoration services in ${area}`,
   keywords:[`Birthday Decoration in ${area}`,`Balloon Decoration in ${area}`,`Anniversary Decoration in ${area}`,`Party Decoration in ${city}`]
 })));
+const kidsBirthdayThemesImgs=[
+  new URL('./image/birthday/kids-birthday-themes/download (1).jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/download (2).jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/download (3).jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/download (4).jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/download (5).jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/download (6).jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/download.jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/Minnie Mouse Backdrop Decor.jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/Sage Green Safari 1st Birthday Decor Ideas _ Modern Wild One Theme.jpg',import.meta.url).href,
+  new URL('./image/birthday/kids-birthday-themes/Whimsical Garden Birthday Party at Night.jpg',import.meta.url).href,
+];
+const firstBirthdayDecorImgs=[
+  new URL('./image/birthday/1st-birthday-decor/1st Happy Birthday _ Adorable First Birthday Decorations.jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/Blue birthday ballon setup.jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/Cute Pink Bunny 1st Birthday Party Backdrop Ideas.jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/download (1).jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/download (2).jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/download (3).jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/download (4).jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/download (5).jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/download.jpg',import.meta.url).href,
+  new URL('./image/birthday/1st-birthday-decor/Magical Fairy Garden Birthday Party Ideas for Kids.jpg',import.meta.url).href,
+];
+const birthdayBalloonDecorationImgs=[
+  new URL('./image/birthday/Birthday Balloon Decoration/Beautiful Birthday Image Cards to Share Love & Joy.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/Can Simple Balloon Decor Turn Your Birthday Into a Dream Celebration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/download (1).jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/download.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/Dreamy Pink & Silver Sweet 16 Balloon Decoration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/Joyeux Anniversaire Ballon de Basket _ Basketball Birthday Decorations.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/Luxury Birthday Decoration Inspiration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/Peach & Gold Glam Birthday Setup.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/Pink Silver White Balloon Decoration Kit for Birthday Party.jpg',import.meta.url).href,
+  new URL('./image/birthday/Birthday Balloon Decoration/White and Golden Birthday Party Decorations with Happy Birthday Banner Fringe Curtai Tablecloth Butterfly Decorations Foil Balloons Happy Birthday Decorations for Women.jpg',import.meta.url).href,
+];
 const birthdayPages=[
-  ['Birthday Balloon Decoration','/decorations/birthday-balloon-decoration','Birthday Balloon Decoration'],
-  ['1st Birthday Decor','/decorations/1st-birthday-decor','1st Birthday Decor'],
-  ['Kids Birthday Themes','/decorations/kids-birthday-themes','Kids Birthday Themes'],
+  {label:'Birthday Balloon Decoration',path:'/decorations/birthday-balloon-decoration',title:'Birthday Balloon Decoration',items:birthdayBalloonDecorationImgs.map((img,i)=>({id:200+i,title:['Beautiful Birthday Cards Decor','Simple Balloon Dream Celebration','Birthday Balloon Decor 1','Birthday Balloon Decor 2','Dreamy Pink & Silver Sweet 16','Basketball Birthday Decoration','Luxury Birthday Decoration','Peach & Gold Glam Birthday','Pink Silver White Balloon Kit','White & Golden Birthday Party'][i],price:[999,1249,1499,1749,1999,2249,2499,2749,2999,3249][i],mrp:[1499,1749,1999,2249,2499,2749,2999,3249,3499,3749][i],rating:(4.7+(i%3)/10).toFixed(1),reviews:80+i*19,img,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))},
+  {label:'1st Birthday Decor',path:'/decorations/1st-birthday-decor',title:'1st Birthday Decor',items:firstBirthdayDecorImgs.map((img,i)=>({id:210+i,title:['Adorable First Birthday Decorations','Blue Birthday Balloon Setup','Cute Pink Bunny 1st Birthday Backdrop','1st Birthday Decor 1','1st Birthday Decor 2','1st Birthday Decor 3','1st Birthday Decor 4','1st Birthday Decor 5','1st Birthday Decor 6','Magical Fairy Garden Birthday'][i],price:[1499,1749,1999,2249,2499,2749,2999,3249,3499,3749][i],mrp:[1999,2249,2499,2749,2999,3249,3499,3749,3999,4249][i],rating:(4.7+(i%3)/10).toFixed(1),reviews:90+i*19,img,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))},
+  {label:'Kids Birthday Themes',path:'/decorations/kids-birthday-themes',title:'Kids Birthday Themes',items:kidsBirthdayThemesImgs.map((img,i)=>({id:220+i,title:['Kids Birthday Theme 1','Kids Birthday Theme 2','Kids Birthday Theme 3','Kids Birthday Theme 4','Kids Birthday Theme 5','Kids Birthday Theme 6','Kids Birthday Theme 7','Minnie Mouse Backdrop Decor','Sage Green Safari 1st Birthday','Whimsical Garden Birthday Party'][i],price:[1499,1749,1999,2249,2499,2749,2999,3249,3499,3749][i],mrp:[1999,2249,2499,2749,2999,3249,3499,3749,3999,4249][i],rating:(4.7+(i%3)/10).toFixed(1),reviews:85+i*17,img,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))},
   ['Birthday Balloon Arch','/decorations/birthday-balloon-arch','Birthday Balloon Arch'],
   ['Birthday Party Backdrops','/decorations/birthday-party-backdrops','Birthday Party Backdrops']
-].map(([label,path,title],page)=>({label,path,title,items:Array.from({length:10},(_,i)=>({id:200+page*10+i,title:`${title} ${i+1}`,price:999+page*500+i*250,mrp:1499+page*600+i*300,rating:(4.7+(i%3)/10).toFixed(1),reviews:80+i*19,img:`https://picsum.photos/seed/elite-${page}-${i}/800/800`,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))}));
+].map((item,page)=>typeof item==='object'&&item.label?item:({label:item[0],path:item[1],title:item[2],items:Array.from({length:10},(_,i)=>({id:200+(page)*10+i,title:`${item[2]} ${i+1}`,price:999+page*500+i*250,mrp:1499+page*600+i*300,rating:(4.7+(i%3)/10).toFixed(1),reviews:80+i*19,img:`https://picsum.photos/seed/elite-${page}-${i}/800/800`,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))}));
 const balloonPages=[
   ['Balloon Arches','/decorations/balloon-arches','Balloon Arches'],
   ['Balloon Bouquets','/decorations/balloon-bouquets','Balloon Bouquets'],
@@ -342,6 +378,28 @@ const birthdayLocalImgs=[
   new URL('./image/birthday/✨ Stunning Happy Birthday Mom Room Decor Ideas ❤️💛 _ Elegant Red & Gold Birthday Bedroom Inspiratio.jpg',import.meta.url).href,
 ];
 const birthdayLocalItems=birthdayLocalImgs.map((img,i)=>({id:700+i,title:['18th Birthday Backdrop Setup','25 Dreamy Balloon Birthday Ideas','Birthday Decoration at Home','Birthday Decoration','Birthday Balloon Setup 1','Birthday Balloon Setup 2','Birthday Balloon Setup 3','Birthday Balloon Setup 4','Birthday Balloon Setup 5','Birthday Balloon Setup 6','Birthday Balloon Setup 7','Birthday Balloon Setup 8','Birthday Balloon Setup 9','Dreamy Birthday Night Decoration','Happy Birthday Card Decoration','Happy Birthday Decoration Ideas','Happy Birthday Setup','Instagram Birthday Decoration','Neon Aesthetic Birthday Corner','Ring Decoration Setup','Stunning Birthday Mom Room Decor'][i],price:[2499,3499,1999,2799,1499,1799,2199,2599,1899,2299,2699,3099,1699,3299,1599,2099,2399,1999,2899,2199,3999][i],mrp:[2999,3999,2499,3299,1999,2299,2699,3099,2399,2799,3199,3599,2199,3799,2099,2599,2899,2499,3399,2699,4499][i],rating:(4.8+(i%3)/10).toFixed(1),reviews:120+i*23,img,tag:i===0?'BESTSELLER':i===3?'SAME DAY':''}));
+const weddingLocalImgs=[
+  new URL('./image/birthday/Wedding/25 Elegant Wedding Balloon Arrangements That Look Expensive.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/25 Unique Spring Balloon Arch Ideas for Your Next.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/27 Wedding Balloon Decoration Creations for Stunning Wedding Experiences.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/50 Balloon Arch Ideas \u2013 Happily Custom.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Blush Pink Wedding Decor Inspiration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Burgundy Giant Bow \uD83C\uDF80 _ Elegant Party Statement.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Burgundy Gold Balloons Garland Double Stuffed Wine Red Sand White Metallic Gold Latex Balloons Arch Kit For Bridal Wedding Valentine Anniversary Bridal Shower Birthday Party Decorations _ SHEIN.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/download (1).jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/download.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Elegant Blush Balloon Floral Stage _ Luxury Event Decorations.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Gerbang Event R8 Kokoh dan Elegan HUBUNGIN KAMI 081316140397.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Happy birthday to You.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Ph\u00F4ng Trang Tr\u00ED Sinh Nh\u1EADt Ng\u01B0\u1EDDi Y\u00EAu.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Romantic Balcony Classic Balloon Arch at Night.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/Wedding Balloons Stage Ideas \uD83C\uDF88 _ Elegant & Modern Balloon Decor Inspiration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/White Floral Balloon Heart Decorations for Elegant Celebrations.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/\uD83C\uDF88 Burgundy Large Bow \u2013 Because Every Birthday Deserves Drama!.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/\uD83D\uDC8D Tie the Knot with This Romantic Giant Pink Bow.jpg',import.meta.url).href,
+  new URL('./image/birthday/Wedding/\uD83E\uDD0D Big White Bow \u2013 The Ultimate Romantic Touch for Your Wedding.jpg',import.meta.url).href,
+];
+const weddingLocalItems=weddingLocalImgs.map((img,i)=>({id:1000+i,title:['Elegant Wedding Balloon Arrangements','Spring Balloon Arch Wedding','Wedding Balloon Decoration Creations','50 Balloon Arch Ideas','Blush Pink Wedding Decor','Burgundy Giant Bow Statement','Burgundy Gold Balloon Garland','Wedding Decor 1','Wedding Decor 2','Elegant Blush Balloon Floral Stage','Gerbang Event Decoration','Happy Birthday Wedding Setup','Romantic Vietnamese Decor','Romantic Balcony Balloon Arch','Wedding Balloons Stage Ideas','White Floral Balloon Heart','Burgundy Large Bow','Romantic Giant Pink Bow','Big White Bow Wedding'][i],price:[4999,3999,5499,4499,3499,2999,3799,2499,2699,5999,4299,2299,3299,3999,4799,3599,2799,3199,2599][i],mrp:[5999,4799,6499,5299,4199,3599,4499,2999,3199,6999,4999,2799,3799,4699,5699,4299,3299,3799,3099][i],rating:(4.8+(i%3)/10).toFixed(1),reviews:80+i*17,img,tag:i===0?'BESTSELLER':i===4?'SAME DAY':''}));
 const categoryMeta={
   'birthday':{title:'Birthday Decoration',eyebrow:'CELEBRATE IN STYLE',hero:birthdayLocalImgs[0],desc:'Make every birthday unforgettable with premium balloon setups, arches and backdrops delivered to your doorstep.',color:'#fff1f5',items:birthdayLocalItems},
   'birthday-decorations':{title:'Birthday Balloon Decoration',eyebrow:'CELEBRATE IN STYLE',hero:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200',desc:'Make every birthday unforgettable with premium balloon setups, arches and backdrops delivered to your doorstep.',color:'#fff1f5',items:homeCollections[0].items},
@@ -350,6 +408,7 @@ const categoryMeta={
   'baby-shower':{title:'Baby Shower Decoration',eyebrow:'LITTLE MOMENTS, BIG JOY',hero:babyKidsLocalImgs[4],desc:'Celebrate the parents-to-be with stunning baby shower setups, gender reveal backdrops and balloon arches.',color:'#f0fff4',items:babyKidsLocalItems},
   'baby-shower-decorations':{title:'Baby Shower Decoration',eyebrow:'LITTLE MOMENTS, BIG JOY',hero:'https://cdn.7eventzz.com/images/48/5d189911-9576-4d3a-9a97-fbc8f6cd6b51.webp',desc:'Celebrate the parents-to-be with stunning baby shower setups, gender reveal backdrops and balloon arches.',color:'#f0fff4',items:homeCollections[4].items},
   'room-decorations':{title:'Romantic Room Decoration',eyebrow:'CELEBRATE YOUR STORY',hero:'https://cdn.7eventzz.com/images/48/d6d2fa32-fda2-42e3-99fc-68713bbf9141.webp',desc:'Transform any room into a romantic haven with candles, balloons, rose petals and fairy lights.',color:'#fff1f5',items:homeCollections[1].items},
+  'wedding':{title:'Wedding Decoration',eyebrow:'YOUR DAY, BEAUTIFULLY STYLED',hero:weddingLocalImgs[0],desc:'Elegant wedding balloon decorations, arches and backdrops crafted for your most cherished moments.',color:'#fffbf0',items:weddingLocalItems},
   'haldi-decorations':{title:'Wedding & Haldi Decoration',eyebrow:'YOUR DAY, BEAUTIFULLY STYLED',hero:'https://cdn.7eventzz.com/images/48/7896fa4c-c0f9-40c3-8639-f04843b6f66e.webp',desc:'Elegant wedding, haldi and mehendi decoration packages crafted for your most cherished moments.',color:'#fffbf0',items:occasionPages.filter(p=>p.section==='Wedding').flatMap(p=>p.items).slice(0,12)},
   'anniversary':{title:'Anniversary Decoration',eyebrow:'LOVE DESERVES A CELEBRATION',hero:anniversaryLocalImgs[0],desc:'Surprise your partner with a beautifully decorated room, balloon arch or candlelight setup for your anniversary.',color:'#fff1f5',items:anniversaryLocalItems},
   'anniversary-decorations':{title:'Anniversary Decoration',eyebrow:'LOVE DESERVES A CELEBRATION',hero:'https://cdn.7eventzz.com/images/48/9d3aa4c2-77ee-4f00-9fed-2383dacce431.webp',desc:'Surprise your partner with a beautifully decorated room, balloon arch or candlelight setup for your anniversary.',color:'#fff1f5',items:homeCollections[1].items},
