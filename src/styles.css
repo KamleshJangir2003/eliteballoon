@@ -898,3 +898,26 @@
   .headerContact.call svg{width:17px;height:17px;color:#4c4650;}
   .headerContact.whatsapp .whatsappIcon{width:17px;height:17px;}
 }
+
+/* ── Ahmedabad City Page SEO Sections ── */
+.cityServiceSections{margin:28px 0;}
+.cityServiceBlock{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:16px;}
+.cityServiceBlock h2{font-size:18px;margin:0 0 10px;color:var(--ink);}
+.cityServiceBlock p{color:#5e5960;line-height:1.75;margin:0 0 12px;font-size:13.5px;}
+.cityServiceBlock a{color:var(--pink);font-weight:600;font-size:13px;}
+.cityServiceBlock a:hover{text-decoration:underline;}
+.cityAreaGroup{margin-bottom:14px;}
+.cityAreaGroup h3{font-size:13px;font-weight:700;color:var(--pink);margin:0 0 4px;letter-spacing:.3px;}
+.cityAreaGroup p{font-size:12.5px;color:#5e5960;margin:0;line-height:1.6;}
+.cityAreaBox h2{font-size:16px;margin:0 0 10px;}
+.cityAreaBox p{font-size:12.5px;color:#5e5960;line-height:1.6;margin:0 0 14px;}
+.cityAreaBox a{color:var(--pink);}
+@media(max-width:768px){
+  .cityServiceBlock{padding:16px 16px;}
+  .cityServiceBlock h2{font-size:16px;}
+}
+@media(max-width:480px){
+  .cityServiceBlock{padding:14px 14px;}
+  .cityServiceBlock h2{font-size:15px;}
+  .cityServiceBlock p{font-size:13px;}
+}
