@@ -405,6 +405,34 @@ const numberBalloonsImgs=[
   new URL('./image/birthday/Number Balloons/number-balloon-decor-5.jpg',import.meta.url).href,
   new URL('./image/birthday/Number Balloons/number-balloon-decor-6.jpg',import.meta.url).href,
 ];
+const haldiDecorationImgs=[
+  new URL('./image/birthday/Haldi Decoration/20 Simple Haldi Ceremony Decoration Ideas At Home 2025.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/Beautiful decoration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi ceremony.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-decor-ahmedabad-event.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-balloon-decoration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-decor-1.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-decor-2.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-decor-3.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-decor-4.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/haldi-decor-5.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/it\'s a best degine to wedding mehndi and haldi.jpg',import.meta.url).href,
+  new URL('./image/birthday/Haldi Decoration/simple-outdoor-haldi-decoration.jpg',import.meta.url).href,
+];
+const engagementDecorationImgs=[
+  new URL('./image/birthday/Engagement Decoration/8b92687d8120f211895187a4e95ea1b5.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Blush Pink Wedding Decor Inspiration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/engagement-decor-instagram-1.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/engagement-decor-instagram-2.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/flower backdrop.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Instagram.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Modern Aesthetic Engagement Decoration With Luxury Flowers.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Pink & White Floral Wedding Backdrop Decoration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Red Tulle Backdrop with Lights .jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Romantic Floral Arch Engagement Decoration Inspiration.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Romantic Floral Arch Wedding Backdrop with Fairy Lights.jpg',import.meta.url).href,
+  new URL('./image/birthday/Engagement Decoration/Shocking Pink & Ivory Luxury Wedding Stage Decor.jpg',import.meta.url).href,
+];
 const firstBirthdayOccasionImgs=[
   new URL('./image/birthday/First Birthday/1st Happy Birthday _ Adorable First Birthday Decoration.jpg',import.meta.url).href,
   new URL('./image/birthday/First Birthday/Baby shower Decor.jpg',import.meta.url).href,
@@ -609,8 +637,8 @@ const occasionPages=[
   ['Baby & Kids','Naming Ceremony','/decorations/naming-ceremony',namingCeremonyImgs],
   ['Baby & Kids','Kids Theme Decor','/decorations/kids-theme-decor',kidsThemeDecorImgs],
   ['Baby & Kids','First Birthday','/decorations/first-birthday',firstBirthdayOccasionImgs],
-  ['Wedding','Engagement Decoration','/decorations/engagement-decoration'],
-  ['Wedding','Haldi Decoration','/decorations/haldi-decoration'],
+  ['Wedding','Engagement Decoration','/decorations/engagement-decoration',engagementDecorationImgs],
+  ['Wedding','Haldi Decoration','/decorations/haldi-decoration',haldiDecorationImgs],
   ['Wedding','Mehendi Decoration','/decorations/mehendi-decoration'],
   ['Wedding','Wedding Backdrops','/decorations/wedding-backdrops'],
   ['Wedding','Reception Decor','/decorations/reception-decor']
