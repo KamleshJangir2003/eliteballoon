@@ -576,6 +576,18 @@ const organicBalloonDecorImgs=[
   new URL('./image/birthday/Organic Balloon Decor/organic-balloon-decor-1.jpg',import.meta.url).href,
   new URL('./image/birthday/Organic Balloon Decor/organic-balloon-decor-2.jpg',import.meta.url).href,
 ];
+const weddingBackdropsImgs=[
+  new URL('./image/birthday/Balloon Arches/19+ Creative Gender Reveal Balloon Arch Ideas .jpg',import.meta.url).href,
+  new URL('./image/Wedding Backdrops/Pink & Gold Balloon Arch Decorations for anniversary & Party.jpg',import.meta.url).href,
+  new URL('./image/birthday/Balloon Arches/Balloon Arch.jpg',import.meta.url).href,
+  new URL('./image/Wedding Backdrops/27 Wedding Balloon Decoration Creations for Stunning Wedding Experiences.jpg',import.meta.url).href,
+  new URL('./image/birthday/Balloon Arches/Bloom & Arch Balloon Installations.jpg',import.meta.url).href,
+  new URL('./image/Wedding Backdrops/Blue & Gold Balloon Arch Wedding Stage Decorations.jpg',import.meta.url).href,
+  new URL('./image/Wedding Backdrops/Curved Stainless Steel Arch Wedding Backdrop Outdoor Flower Door Frame Decorative Metal Archway for.jpg',import.meta.url).href,
+  new URL('./image/Wedding Backdrops/download.jpg',import.meta.url).href,
+  new URL('./image/birthday/Balloon Arches/Pastel Rainbow Balloon Arch for First Birthday Party Cake Smash Decor.jpg',import.meta.url).href,
+  new URL('./image/birthday/Balloon Arches/winter-wonderland-balloon-arch.jpg',import.meta.url).href,
+];
 const balloonArchImgs=[
   new URL('./image/birthday/Balloon Arches/19+ Creative Gender Reveal Balloon Arch Ideas .jpg',import.meta.url).href,
   new URL('./image/birthday/Balloon Arches/25 Stunning Blue and White Balloon Arch Ideas for Any Celebration.jpg',import.meta.url).href,
@@ -640,7 +652,7 @@ const occasionPages=[
   ['Wedding','Engagement Decoration','/decorations/engagement-decoration',engagementDecorationImgs],
   ['Wedding','Haldi Decoration','/decorations/haldi-decoration',haldiDecorationImgs],
   ['Wedding','Mehendi Decoration','/decorations/mehendi-decoration'],
-  ['Wedding','Wedding Backdrops','/decorations/wedding-backdrops'],
+  ['Wedding','Wedding Backdrops','/decorations/wedding-backdrops',weddingBackdropsImgs],
   ['Wedding','Reception Decor','/decorations/reception-decor']
 ].map(([section,title,path,imgs],page)=>({section,title,path,items:Array.from({length:imgs?imgs.length:10},(_,i)=>({id:400+page*10+i,title:`${title} ${i+1}`,price:1499+page*350+i*300,mrp:2199+page*450+i*350,rating:(4.7+(i%3)/10).toFixed(1),reviews:90+i*23,img:imgs?imgs[i%imgs.length]:`https://picsum.photos/seed/occasion-${page}-${i}/800/800`,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))}));
 const cityExtra={
