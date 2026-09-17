@@ -79,7 +79,7 @@ const homeCollections=[
 const kidsSpecial=[
   ['Baby Ceremony','https://cdn.7eventzz.com/images/48/1789c020-1887-4c1f-8acd-8446b142e890.webp','/ceremony-decorations'],
   ['1st Birthday','https://cdn.7eventzz.com/images/48/b07e0d61-8bc8-4d58-b2ed-52345495870f.webp','/kids-theme-decorations'],
-  ['Kids Activity','https://cdn.7eventzz.com/images/48/eae2d1c1-1ece-49eb-b07c-bfb6c99ab374.webp','/kids-activities'],
+  ['Newborn Welcome','https://cdn.7eventzz.com/images/48/2c1187e3-a232-4e3d-a299-20174e07cd55.webp','/baby-welcome-decorations'],
   ['Stage Decor','https://cdn.7eventzz.com/images/48/0dfa57d9-92a6-4438-8bcb-aea593cd4bcb.webp','/stage-decorations'],
   ['Annaprashan','https://cdn.7eventzz.com/images/48/c432e032-a4c9-448b-bc45-e15abba121dd.webp','/ceremony-decorations/annaprashan-rice'],
   ['Naming Ceremony','https://cdn.7eventzz.com/images/48/34026d38-bac3-4167-a621-ff461c72e6c5.webp','/ceremony-decorations/naming']
@@ -682,7 +682,7 @@ const morePages=[
   ['Room Decorations','room-decorations','Venue & Setup'],['Stage Decorations','stage-decorations','Venue & Setup'],['Canopy Decorations','canopy-decorations','Venue & Setup'],['Terrace Decorations','terrace-decorations','Venue & Setup'],['Premium Decorations','premium-decorations','Venue & Setup'],['Car Boot Decorations','car-boot-decorations','Venue & Setup'],
   ['Congratulation Decorations','congratulation-decorations','Occasions'],['Retirement Decorations','retirement-decorations','Occasions'],['Housewarming Decorations','housewarming-decorations','Occasions'],['Office Decorations','office-decorations','Occasions'],['Halloween Decorations','halloween-decorations','Occasions'],
   ['Ganpati Decorations','ganpati-decorations','Festivals & Faith'],['Guruji Decorations','guruji-decorations','Festivals & Faith'],
-  ['Balloon Bouquets','balloon-bouquets','Add-ons'],['Flower Decorations','flower-decorations','Add-ons'],['Kids Activities','kids-activities','Add-ons']
+  ['Flower Decorations','flower-decorations','Add-ons']
 ].map(([title,slug,group],page)=>({title,slug,group,path:'/'+slug,items:Array.from({length:10},(_,i)=>({id:600+page*10+i,title:`${title} ${i+1}`,price:1299+page*300+i*250,mrp:1899+page*400+i*300,rating:(4.7+(i%3)/10).toFixed(1),reviews:70+i*18,img:`https://picsum.photos/seed/more-${page}-${i}/800/800`,tag:i===0?'BESTSELLER':i===1?'SAME DAY':''}))}));
 const navMenus=[
   {label:'Birthday',path:'/decorations/birthday',items:birthdayPages},
@@ -695,7 +695,7 @@ const navMenus=[
     {title:'Venue & Setup',items:[['Room Decorations','/room-decorations'],['Stage Decorations','/stage-decorations'],['Canopy Decorations','/canopy-decorations'],['Terrace Decorations','/terrace-decorations'],['Premium Decorations','/premium-decorations'],['Car Boot Decorations','/car-boot-decorations']]},
     {title:'Occasions',items:[['Congratulation Decorations','/congratulation-decorations'],['Retirement Decorations','/retirement-decorations'],['Housewarming Decorations','/housewarming-decorations'],['Office Decorations','/office-decorations'],['Halloween Decorations','/halloween-decorations']]},
     {title:'Festivals & Faith',items:[['Ganpati Decorations','/ganpati-decorations'],['Guruji Decorations','/guruji-decorations'],['Jain Festival','/jain-festival-decorations'],['Diwali Decorations','/diwali-decorations'],['New Year Decorations','/new-year-decorations'],['Christmas Decorations','/christmas-decorations']]},
-    {title:'Add-ons',items:[['Balloon Bouquets','/balloon-bouquets'],['Flower Decorations','/flower-decorations'],['Kids Activities','/kids-activities']]}
+    {title:'Add-ons',items:[['Flower Decorations','/flower-decorations']]}
   ],extra:'Contact our experts'}
 ];
 const AppContext=createContext();
@@ -1072,7 +1072,28 @@ const categoryMeta={
     ...candlelightSetupImgs.map((img,i)=>({id:17000+i,title:['Candlelight Setup 1','Candlelight Setup 2','Candlelight Setup 3','Dreamy Outdoor Valentine Dinner','Dreamy Romantic Proposal Candlelight','Floating Romance Dreamy Lakeside','Happy Anniversary Candlelight','Romantic Anniversary Red Rose Setup','Romantic Garden Anniversary Night','Romantic Anniversary Terrace Decor','Wedding Anniversary Card Decoration'][i],price:[2499,2699,2899,3299,3499,3999,2299,2799,3099,2999,2199][i],mrp:[2999,3199,3399,3799,3999,4499,2799,3299,3599,3499,2699][i],rating:(4.8+(i%3)/10).toFixed(1),reviews:95+i*16,img,tag:i===0?'BESTSELLER':i===5?'SAME DAY':''})),
     ...proposalDecorationImgs.map((img,i)=>({id:17020+i,title:['Dreamy Beach Proposal Setup','I Took Her to Dubai Proposal','Imaginate Proposal Set','Luxury Proposal & Engagement Setup','Luxury Proposal London','Marry Me Proposal Setup','Marry Me Roses Proposal','Proposal Decoration 1','Romantic Beach Proposal Setup','Vision Board Proposal'][i],price:[3499,4999,3999,5499,4499,2999,3299,2499,3799,2799][i],mrp:[3999,5499,4499,5999,4999,3499,3799,2999,4299,3299][i],rating:(4.9+(i%2)/10).toFixed(1),reviews:88+i*19,img,tag:i===0?'BESTSELLER':i===3?'SAME DAY':''})),
   ]},
-  'flower-decorations':{title:'Flower Decoration',eyebrow:'BLOOMS FOR EVERY OCCASION',hero:'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=1200',desc:'Fresh and artificial flower decorations for weddings, birthdays, baby showers and all celebrations.',color:'#f0fff4',items:morePages.find(p=>p.slug==='flower-decorations')?.items||products},
+  'flower-decorations':{title:'Flower Decoration',eyebrow:'BLOOMS FOR EVERY OCCASION',hero:new URL('./image/Flower Decoration/Elegant Blush Balloon Floral Stage _ Luxury Event Decorations.jpg',import.meta.url).href,desc:'Fresh and artificial flower decorations for weddings, birthdays, baby showers and all celebrations.',color:'#f0fff4',items:[
+    new URL('./image/Flower Decoration/valentines-red-rose-decoration.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Artificial Fuchsia & Orange Flower Arrangement Backdrop, Party Table Centerpiece, Home DIY Decor for.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/background para fotos.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/birthday.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/boho-garden-party-arch.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/DFW Floral Decor Inspiration.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/download (1).jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/download (2).jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/download.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Elegant Blush Balloon Floral Stage _ Luxury Event Decorations.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/event decor.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Instagram.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/joyeux-anniversaire-balloon-floral.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Pink Balloon Flower Arch.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Ring backdrop.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Romantic Floral Arch Engagement Decoration Inspiration.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Romantic Red & White Floral Wedding Arch.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/Royal White Rose Engagement Stage Decoration Ideas.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/heart-arch-valentine-backdrop-1.jpg',import.meta.url).href,
+    new URL('./image/Flower Decoration/heart-arch-valentine-backdrop-2.jpg',import.meta.url).href,
+  ].map((img,i)=>({id:20000+i,title:['Valentine Red Rose Decoration','Fuchsia Orange Flower Backdrop','Background Photo Flower Decor','Birthday Flower Decoration','Boho Garden Party Arch','DFW Floral Decor Inspiration','Flower Decor 1','Flower Decor 2','Flower Decor 3','Elegant Blush Balloon Floral Stage','Event Flower Decor','Instagram Flower Decor','Joyeux Anniversaire Balloon Floral','Pink Balloon Flower Arch','Ring Backdrop Flower Decor','Romantic Floral Arch Engagement','Romantic Red White Floral Wedding Arch','Royal White Rose Engagement Stage','Heart Arch Valentine Backdrop 1','Heart Arch Valentine Backdrop 2'][i],price:[2499,2999,1999,2199,3499,2799,1799,1899,1699,3999,2299,2099,2399,2699,3199,3299,3799,4299,2899,2899][i],mrp:[2999,3499,2499,2699,3999,3299,2299,2399,2199,4499,2799,2599,2899,3199,3699,3799,4299,4799,3399,3399][i],rating:(4.8+(i%3)/10).toFixed(1),reviews:80+i*14,img,tag:i===0?'BESTSELLER':i===4?'SAME DAY':''}))},
   'office-decorations':{title:'Office & Corporate Decoration',eyebrow:'CELEBRATE AT WORK',hero:'https://cdn.7eventzz.com/47/1768480275776.webp',desc:'Professional decoration for office birthdays, corporate events, product launches and team celebrations.',color:'#f5efff',items:morePages.find(p=>p.slug==='office-decorations')?.items||products},
   'premium-decorations':{title:'Premium Decoration',eyebrow:'LUXURY SETUPS',hero:'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200',desc:'Top-tier premium decoration packages with custom backdrops, luxury balloons and full event styling.',color:'#fff8f3',items:morePages.find(p=>p.slug==='premium-decorations')?.items||products},
   'terrace-decorations':{title:'Terrace Decoration',eyebrow:'OPEN AIR CELEBRATIONS',hero:'https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=1200',desc:'Stunning terrace party setups with fairy lights, balloon arches and themed decor under the open sky.',color:'#f5efff',items:morePages.find(p=>p.slug==='terrace-decorations')?.items||products},
