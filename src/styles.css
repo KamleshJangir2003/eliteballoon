@@ -875,14 +875,14 @@
 .mMenuGroupTitle{font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--pink);padding:10px 20px 4px;text-transform:uppercase;}
 .mMenuSubLink{display:block;padding:9px 20px;font-size:13px;color:#5e5960;}
 .mMenuSubLink:hover{color:var(--pink);background:#fff1f5;}
-.mDrawerFooter{padding:14px 16px 18px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.mDrawerCall,.mDrawerWa{display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;border-radius:10px;font-size:13px;font-weight:700;line-height:1;text-decoration:none;}
-.mDrawerCall{border:1.5px solid #e0d8e4;color:var(--ink);background:#fff;}
-.mDrawerCall:hover{border-color:var(--pink);color:var(--pink);background:#fff7f9;}
-.mDrawerCall svg{width:16px;height:16px;flex:none;}
-.mDrawerWa{background:#25d366;color:#fff;border:1.5px solid #25d366;}
-.mDrawerWa:hover{background:#1ebe5d;border-color:#1ebe5d;}
-.mDrawerWa .whatsappIcon{width:16px;height:16px;flex:none;}
+.mDrawerFooter{padding:12px 14px 16px;border-top:1px solid var(--line);display:flex;flex-direction:row;gap:10px;}
+.mDrawerFooter a.mDrawerCall,.mDrawerFooter a.mDrawerWa{flex:1;min-width:0;display:flex !important;align-items:center !important;justify-content:center !important;gap:6px;height:48px !important;padding:0 8px !important;border-radius:10px;font-size:15px !important;font-weight:600 !important;line-height:1 !important;text-decoration:none;white-space:nowrap;box-sizing:border-box;border-bottom:none !important;}
+.mDrawerFooter a.mDrawerCall{border:1px solid #e0d8e4 !important;color:var(--ink) !important;background:#fff !important;}
+.mDrawerFooter a.mDrawerCall:hover{border-color:var(--pink) !important;color:var(--pink) !important;background:#fff7f9 !important;}
+.mDrawerFooter a.mDrawerCall svg{width:16px;height:16px;flex:none;}
+.mDrawerFooter a.mDrawerWa{background:#25D366 !important;color:#fff !important;border:1.5px solid #25D366 !important;}
+.mDrawerFooter a.mDrawerWa:hover{background:#1ebe5d !important;border-color:#1ebe5d !important;}
+.mDrawerFooter a.mDrawerWa .whatsappIcon{width:16px;height:16px;flex:none;}
 
 /* ── Mobile Header Contact Buttons ── */
 @media(max-width:768px){

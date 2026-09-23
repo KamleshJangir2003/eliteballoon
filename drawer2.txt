@@ -1,0 +1,18 @@
+﻿.mMenuSubLink{display:block;padding:9px 20px;font-size:13px;color:#5e5960;}
+.mMenuSubLink:hover{color:var(--pink);background:#fff1f5;}
+.mDrawerFooter{padding:14px 16px 18px;border-top:1px solid var(--line);display:flex;flex-direction:row;gap:10px;}
+.mDrawerCall,.mDrawerWa{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:7px;height:48px;padding:0 10px;border-radius:10px;font-size:15px;font-weight:600;line-height:1;text-decoration:none;white-space:nowrap;box-sizing:border-box;}
+.mDrawerCall{border:1px solid #e0d8e4;color:var(--ink);background:#fff;}
+.mDrawerCall:hover{border-color:var(--pink);color:var(--pink);background:#fff7f9;}
+.mDrawerCall svg{width:16px;height:16px;flex:none;}
+.mDrawerWa{background:#25D366;color:#fff;border:1.5px solid #25D366;}
+.mDrawerWa:hover{background:#1ebe5d;border-color:#1ebe5d;}
+.mDrawerWa .whatsappIcon{width:16px;height:16px;flex:none;}
+
+/* ── Mobile Header Contact Buttons ── */
+@media(max-width:768px){
+  .head .actions{display:flex;gap:8px;margin-left:auto;}
+  .headerContact span{display:none;}
+  .headerContact{padding:8px;border-radius:8px;gap:0;}
+  .headerContact.call{border:1px solid #e0d8e4;}
+  .headerContact.call svg{width:18px;height:18px;}
